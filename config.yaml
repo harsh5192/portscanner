@@ -1,0 +1,52 @@
+# Network Security Assessment Platform Configuration
+
+app:
+  name: "Modular Network Security Assessment Platform"
+  version: "0.1.0"
+  env: "development"
+
+database:
+  url: "sqlite:///./data/scanner.db"
+
+scanner:
+  nmap_path: "nmap"
+  default_timeout: 300
+  output_dir: "./reports"
+  enabled_modules:
+    - "nmap"
+
+logging:
+  level: "INFO"
+  file_path: "./logs/scanner.log"
+  console_output: true
+
+profiles:
+  DEFAULT:
+    name: "Default Scan"
+    description: "Host discovery, common ports, and basic service detection"
+    nmap_arguments: "-sn -sV -F"
+    requires_authorization: false
+
+  QUICK:
+    name: "Quick Port Scan"
+    description: "Fast scan of top 100 most common ports without service detection"
+    nmap_arguments: "-F --top-ports 100 -T4"
+    requires_authorization: false
+
+  FULL:
+    name: "Full Port & Service Scan"
+    description: "Comprehensive scan across ports 1-65535 with full OS and service version detection"
+    nmap_arguments: "-p 1-65535 -sV -O -T3"
+    requires_authorization: true
+
+  WEB:
+    name: "Web Infrastructure Scan"
+    description: "HTTP/HTTPS ports (80,443,8080,8443) scan with detailed service scripts"
+    nmap_arguments: "-p 80,443,8080,8443,8000,8888 -sV"
+    requires_authorization: false
+
+  CUSTOM:
+    name: "Custom Scan Profile"
+    description: "User-defined custom ports and arguments"
+    nmap_arguments: ""
+    requires_authorization: false

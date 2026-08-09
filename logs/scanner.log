@@ -1,0 +1,13 @@
+[2026-08-09 19:17:45] [INFO] [netsec_scanner]: Database tables initialized successfully.
+[2026-08-09 19:17:45] [ERROR] [netsec_scanner]: Database transaction error: When initializing mapper Mapper[Host(hosts)], expression 'Vulnerability' failed to locate a name ('Vulnerability'). If this is a class name, consider adding this relationship() to the <class 'app.models.host.Host'> class after both dependent classes have been defined.
+[2026-08-09 19:17:45] [INFO] [netsec_scanner]: Launching Nmap scan on target '127.0.0.1' with args: '-sV' ports: '80'
+[2026-08-09 19:17:45] [INFO] [netsec_scanner]: Plugin 'SamplePlugin' (v1.0.0) registered.
+[2026-08-09 19:17:46] [WARNING] [netsec_scanner]: Authorization denied for intrusive scan profile 'FULL'.
+[2026-08-09 19:20:44] [INFO] [netsec_scanner]: Database tables initialized successfully.
+[2026-08-09 19:20:44] [INFO] [netsec_scanner]: Launching Nmap scan on target '127.0.0.1' with args: '-sV' ports: '80'
+[2026-08-09 19:20:44] [INFO] [netsec_scanner]: Plugin 'SamplePlugin' (v1.0.0) registered.
+[2026-08-09 19:20:44] [WARNING] [netsec_scanner]: Authorization denied for intrusive scan profile 'FULL'.
+[2026-08-09 19:24:29] [INFO] [netsec_scanner]: Database tables initialized successfully.
+[2026-08-09 19:24:29] [INFO] [netsec_scanner]: Plugin 'DNSModule' (v1.0.0) registered.
+[2026-08-09 19:24:58] [INFO] [netsec_scanner]: Database tables initialized successfully.
+[2026-08-09 19:24:58] [INFO] [netsec_scanner]: Plugin 'DNSModule' (v1.0.0) registered.
